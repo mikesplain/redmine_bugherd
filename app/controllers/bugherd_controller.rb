@@ -1,6 +1,5 @@
 class BugherdController < ApplicationController
   unloadable
-  layout 'base'
   accept_api_auth :update, :add_comment, :project_list, :status_list, :priority_list, :trigger_web_hook
   
   def plugin_version
