@@ -9,7 +9,7 @@ class BugherdController < ApplicationController
   def trigger_web_hook
     api_user = find_current_user
     unless api_user and api_user.admin?
-      render :text => 'FAIL'
+      render :text => 'LOGIN FAIL'
       return
     end
 
