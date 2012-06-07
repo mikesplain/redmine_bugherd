@@ -33,7 +33,7 @@ class BugherdController < ApplicationController
   def project_list
     api_user = find_current_user
     unless api_user and api_user.admin?
-      render :text => 'FAIL'
+      render :text => 'project_list FAIL'
       return
     end
     list = []
@@ -46,7 +46,7 @@ class BugherdController < ApplicationController
   def status_list
     api_user = find_current_user
     unless api_user and api_user.admin?
-      render :text => 'FAIL'
+      render :text => 'status_list FAIL'
       return
     end
     render :xml => IssueStatus.all
@@ -55,7 +55,7 @@ class BugherdController < ApplicationController
   def priority_list
     api_user = find_current_user
     unless api_user and api_user.admin?
-      render :text => 'FAIL'
+      render :text => 'priority_list FAIL'
       return
     end
     render :xml => IssuePriority.all
@@ -64,7 +64,7 @@ class BugherdController < ApplicationController
   def update
     api_user = find_current_user
     unless api_user and api_user.admin?
-      render :text => 'FAIL'
+      render :text => 'update FAIL'
       return
     end
     
@@ -105,7 +105,7 @@ class BugherdController < ApplicationController
   def add_comment
     api_user = find_current_user
     unless api_user and api_user.admin?
-      render :text => 'FAIL'
+      render :text => 'add_comment FAIL'
       return
     end
     
